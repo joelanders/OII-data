@@ -1,0 +1,3 @@
+- name: Skype (string, required)
+- project_id: skype (string, required)
+- metrics: metric1, metric2 (array[string])

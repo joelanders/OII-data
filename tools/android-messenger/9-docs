@@ -1,0 +1,54 @@
+- id: 1-signal-android
+  - type: project
+  - deps: # might use one-of, all-of, some-of here
+    - lib1
+    - lib2
+    - lib3
+  - os-family:
+    - id: 2-android-os
+  - os-versions:
+    - kitkat
+    - lollipop
+
+- id: 2-signal-ios
+  - type: project
+  - deps:
+    - lib9
+    - lib8
+  - os:
+    - id: 4-ios-os
+
+- id: 3-android-os
+  - type: os
+  - hardware:
+    - id: 5-android-hardware
+
+- id: 4-ios-os
+  - type: os
+  - hardware:
+    - one-of
+      - 6-iphone-hw
+      - 7-ipad-hw
+
+- id: 5-android-hw
+  - type: hardware
+  - infrastructure:
+    - id: 8-internet-infra
+    - id: 9-gsm-infra
+
+- id: 6-iphone-hw
+  - type: hw
+  - infrastructure:
+    - id: 9-gsm-infra
+    - id: 8-internet-infra
+
+- id: 7-ipad-hw
+  - type: hw
+  - infrastructure
+    - id: 8-internet-infra
+
+- id: 8-internet-infra
+  - type: infra
+
+- id: 9-gsm-infra
+  - type: infra

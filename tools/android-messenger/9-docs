@@ -87,6 +87,9 @@
   - license: partly-free
   - hardware: # express these as "compatibilities" rather than "dependencies?"
     - id: 5-android-hardware
+  - provides:
+    - gsm-network
+    - internet
 
 - id: 4-ios-os
   - type: os
@@ -95,10 +98,15 @@
     - one-of
       - 6-iphone-hw
       - 7-ipad-hw
+  - provides:
+    - gsm-network # hw-dependent
+    - trusted hsm thing # used by apps?
 
 - id: 16-gnu-linux
   - license: free
   - hardware: lots
+  - provides:
+    - internet
 
 ############################# Hardware
 

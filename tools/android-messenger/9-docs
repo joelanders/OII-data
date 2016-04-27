@@ -1,6 +1,7 @@
 # when type=project-src, deps is easy to figure out
 - id: 1-signal-android
   - type: project-src
+  - distribution-method: google-play-store
   - deps: # might use one-of, all-of, some-of here
     - lib1
     - lib2
@@ -17,6 +18,7 @@
 
 - id: 10-cryptocat # express this runs on a browser rather than an os?
   - type: project-src
+  - distribution-method: webapp
   - deps:
     - lib4
   - app-type: web
@@ -36,12 +38,24 @@
 # when type=project-bin, deps is Hard to figure out
 - id: 12-skype-windows
   - type: project-bin
+  - distribution-method:
+    - download-bin
+    - microsoft-app-store
   - infra-deps:
     - 8-internet-infra
     - skype-backend-servers # could be blocked in some places
 
+- id: 13-tor-browser-linux
+  - type: project-src
+  - distribution-method:
+    - download-bin
+    - autoupdate # ?
+    - managed-download-bin # gettor?
+
 - id: 2-signal-ios
   - type: project-src
+  - distribution-method:
+    - ios-app-store
   - deps:
     - lib9
     - lib8

@@ -2,17 +2,19 @@
   - properties
     - type: {project-src, project-bin}
       - many os/arch builds can come from a common src
-      - probably want to eval "app-win" and "app-linux" separately even if they share a src repo
+      - FIXME: want to eval "app-win" and "app-linux" separately even if they share a src repo ?
     - distribution-method: {*-app-store, webapp, download-bin}
       - how user gets the app
     - deps: (list of libraries)
       - say somewhere how we enumerate these (depends on the project)
     - app-type: {native{-desktop, -mobile}, webapp}
-    - os-family: {win, mac, ios, android, linux} # broadly whis os it runs on
+    - os-family: {win, mac, ios, android, gnu/linux} # broadly whis os it runs on
     - os-versions: {win-xp, android-4.4}
     - hw-deps: (fingerprint-reader, cell-baseband)
     - infra-deps: {internet, cell-network, backend-servers}
     - license
+
+################## Apps / Projects
 
 # when type=project-src, deps is easy to figure out
 - id: 1-signal-android
@@ -78,17 +80,27 @@
   - os:
     - id: 4-ios-os
 
+############################## Operating Systems
+
 - id: 3-android-os
   - type: os
-  - hardware:
+  - license: partly-free
+  - hardware: # express these as "compatibilities" rather than "dependencies?"
     - id: 5-android-hardware
 
 - id: 4-ios-os
   - type: os
+  - license: mostly-unfree
   - hardware:
     - one-of
       - 6-iphone-hw
       - 7-ipad-hw
+
+- id: 16-gnu-linux
+  - license: free
+  - hardware: lots
+
+############################# Hardware
 
 - id: 5-android-hw
   - type: hardware
@@ -107,8 +119,26 @@
   - infrastructure
     - id: 8-internet-infra
 
+################################ Infrastructure
+
 - id: 8-internet-infra
   - type: infra
+  - privately-reproducible: no
 
 - id: 9-gsm-infra
   - type: infra
+  - deps:
+    - (subsystems of gsm netowrk. i'm thinking of the people who
+       brought enough subsystems back up during the Egyptian
+       revolution to restore access)?
+
+- id: 14-signal-backend-servers
+  - type: infra
+
+- id: 15-jabber-server
+  - type: infra
+  - privately-reproducible: kind-of # federation?
+
+- id: 17-owncloud # some kind of hosted thing just for yourself
+  - type: infra
+  - privately-reproducible: yes

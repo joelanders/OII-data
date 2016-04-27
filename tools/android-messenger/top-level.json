@@ -1,0 +1,44 @@
+{
+  "component": "android-messenger",
+  "app-deps": [
+    {
+      "component": "lib1",
+      "deps" : [
+          {
+            "component": "another-lib2",
+            "deps" : [
+                {
+                  "commponent": "libc"
+                }
+            ]
+          },
+          {
+            "component": "another-lib2",
+            "deps" : [
+                {
+                  "commponent": "libc"
+                }
+            ]
+          }
+      ]
+    }
+  ],
+  "os-deps": [
+    {
+      "component": "android",
+      "sub-components": [
+          {"component": "contact-permissions"}
+      ]
+    }
+  ],
+  "hardware-deps": [
+    {
+      "component": "gsm-baseband"
+    }
+  ],
+  "infra-deps": [
+    {
+      "component": "gsm-network"
+    }
+  ]
+}

@@ -1,17 +1,47 @@
+# when type=project-src, deps is easy to figure out
 - id: 1-signal-android
-  - type: project
+  - type: project-src
   - deps: # might use one-of, all-of, some-of here
     - lib1
     - lib2
     - lib3
-  - os-family:
-    - id: 2-android-os
-  - os-versions:
+  - app-type: native
+  - os-family: # seems redundant, but only because this project-src happens to be 1-1 with os-family
+    - id: 3-android-os
+  - os-versions: # implied one-of
     - kitkat
     - lollipop
+  - infra-deps:
+    - id: 8-internet-infra
+    - signal-backend-servers # not yet?
+
+- id: 10-cryptocat # express this runs on a browser rather than an os?
+  - type: project-src
+  - deps:
+    - lib4
+  - app-type: web
+  - os-family:
+    - id: 3-android-os
+    - id: 4-ios-os
+
+- id: 11-android-messenger
+  - app-type: native
+  - os-family:
+    - id: 3-android-os
+  - hw-deps:
+    - gsm-baseband
+  - infra-deps:
+    - id: 9-gsm-infra
+
+# when type=project-bin, deps is Hard to figure out
+- id: 12-skype-windows
+  - type: project-bin
+  - infra-deps:
+    - 8-internet-infra
+    - skype-backend-servers # could be blocked in some places
 
 - id: 2-signal-ios
-  - type: project
+  - type: project-src
   - deps:
     - lib9
     - lib8

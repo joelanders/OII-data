@@ -1,27 +1,27 @@
-# Signal Android
-example of 1-1 source repo to build artifact
-example of infrastructure dependencies
-example (artificial) of multiple manifests (not necessary?)
+# GET /
++ Response 200 (application/json)
+    + Attributes (Signal)
 
-## Properties
+# Data Structures
+# Signal
 
-- id: app-1 (required)
-- name: Signal Android
-- type: source-repository
-- vcs_url: https://github.com/WhisperSystems/Signal-Android.git
+- id: `app-1` (required)
+- name: Signal Android (required)
+- type: `source-repository` (required)
+- `vcs-url`: `https://github.com/WhisperSystems/Signal-Android.git`
 - manifests (array)
   - (object)
-    - manifest-type: maven
+    - `manifest-type`: maven
     - deps: lib1 lib2
   - (object)
-    - manifest-type: gradle
+    - `manifest-type`: gradle
     - deps: libx liby
-- build-artifacts (array)
+- `build-artifacts` (array)
   - (object)
-    - name: signal-android-phone
+    - name: `signal-android-phone`
     - type: native-mobile
-- os-families: android
-- os-versions: android-kitkat android-lollipop
-- infra-deps:
-  - internet-infra
-  - signal-backend-servers
+- `os-families`: android
+- `os-versions`: `android-kitkat` `android-lollipop`
+- `infra-deps` (array):
+  - `internet-infra`
+  - `signal-backend-servers`

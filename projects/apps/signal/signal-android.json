@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "vcs-url": {
+      "type": "string"
+    },
+    "manifests": {
+      "type": "array"
+    },
+    "build-artifacts": {
+      "type": "array"
+    },
+    "os-families": {
+      "type": "string"
+    },
+    "os-versions": {
+      "type": "string"
+    },
+    "infra-deps": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "type"
+  ]
+}

@@ -25,7 +25,7 @@
   "builds": [
     {
       "_id": "signal-android-phone.apk",
-      "type": "native",
+      "type": "apk",
       "checksum": "23118A45E8CF30200D6AE1DFEF689893952FA6A5",
       "_meta" :{
         "source": "https://androidobservatory.org/app/698741DD1AA10802CF8B0ECC2942F28FC0F8A074"

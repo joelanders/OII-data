@@ -20,8 +20,11 @@ example (artificial) of multiple manifests (not necessary?)
   - (object)
     - name: signal-android-phone
     - type: native-mobile
-- os-families: android
-- os-versions: android-kitkat android-lollipop
+- os-families: 
+  - android
+- os-versions: 
+  - android-kitkat
+  - android-lollipop
 - infra-deps:
   - internet-infra
   - signal-backend-servers

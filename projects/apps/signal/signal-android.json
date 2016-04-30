@@ -1,0 +1,56 @@
+{
+  "id": "signal-android",
+  "type": "app",
+  "name": "Signal Android",
+  "source": "https://github.com/WhisperSystems/Signal-Android.git",
+  "tracker": "https://github.com/WhisperSystems/Signal-Android/issues",
+  "manifest": {
+    "type": "gradle",
+    "_meta": {
+      "source": "https://github.com/WhisperSystems/Signal-Android/blob/8704daa5f8e7949d70523bfd10e276df88800608/build.gradle"
+    }
+  },
+  "dependencies": [
+    {
+      "_id": "me.leolin:ShortcutBadger:1.1.0-WS1",
+      "type": "binary",
+      "checksum": "3142d017234bfa0cdd69ccded7cc5ea63f13b97574803c8c616c9bbeaad33ad9"
+    },
+    {
+      "_id": "se.emilsjolander:stickylistheaders:2.7.0",
+      "type": "binary",
+      "checksum": "a08ca948aa6b220f09d82f16bbbac395f6b78897e9eeac6a9f0b0ba755928eeb"
+    }
+  ],
+  "builds": [
+    {
+      "_id": "signal-android-phone.apk",
+      "type": "apk",
+      "checksum": "23118A45E8CF30200D6AE1DFEF689893952FA6A5",
+      "_meta" :{
+        "source": "https://androidobservatory.org/app/698741DD1AA10802CF8B0ECC2942F28FC0F8A074"
+      }
+    }
+  ],
+  "os": "android",
+  "oses": [ 
+    {
+      "_id": "android-lollypop",
+      "family": "android",
+      "version": "lollypop"
+    },
+    {
+      "_id": "android-kitkat",
+      "family": "android",
+      "version": "kitkat"
+    }
+  ],
+  "infra": [
+    {
+      "_id": "internet-infra"
+    },
+    {
+      "_id": "signal-backend-servers"
+    }
+  ]
+}

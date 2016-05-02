@@ -1,21 +1,23 @@
-# Apple iOS
-example of OS that runs on limited hw platforms
+# GET /
++ Response 200 (application/json)
+    + Attributes (iOS)
 
-## Properties
+# Data Structures
+# iOS
 
-- id: os-2
+- id: `os-2`
 - name: iOS
-- type: os-family
-- license: mostly-unfree
-- hardware-compatibilities
+- type: `os-family`
+- license: `mostly-unfree`
+- `hardware-compatibilities` (array)
   - apple phones
   - apple tablets
   - apple iPod Touches
-- can-provide-from-hardware
+- `can-provide-from-hardware` (array)
   - trusted hsm thing
-  - bluetooth (some chat apps don't use internet)
-- can-provide-from-infrastructure
-  - gsm-network
-  - cell-data-network
+  - bluetooth
+- `can-provide-from-infrastructure` (array)
+  - `gsm-network`
+  - `cell-data-network`
   - internet
-  - LAN (some chat apps might work over a LAN)
+  - LAN

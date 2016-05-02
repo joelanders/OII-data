@@ -1,0 +1,26 @@
+{
+  "id": "app-2",
+  "name": "Cryptocat",
+  "type": "source-repository",
+  "vcs-url": "https://github.com/cryptocat/cryptocat.git",
+  "manifest": {
+    "type": "npm",
+    "deps": "lib1 lib2"
+  },
+  "builds": [
+    {
+      "name": "cryptocat",
+      "type": "server",
+      "checksum": "abcde"
+    },
+    {
+      "name": "cryptocat",
+      "type": "webapp",
+      "checksum": "abcde"
+    }
+  ],
+  "app-type": "web",
+  "infra": [
+    "cryptocat-backend-server"
+  ]
+}

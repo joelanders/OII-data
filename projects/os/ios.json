@@ -1,0 +1,48 @@
+{
+  "id": "os-2",
+  "name": "iOS",
+  "type": "os-family",
+  "license": "mostly-unfree",
+  "hardware-compatibilities": [
+    "apple phones",
+    "apple tablets",
+    "apple iPod Touches"
+  ],
+  "can-provide-from-hardware": [
+    "trusted hsm thing",
+    "bluetooth"
+  ],
+  "can-provide-from-infrastructure": [
+    "gsm-network",
+    "cell-data-network",
+    "internet",
+    "LAN"
+  ]
+}
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "hardware-compatibilities": {
+      "type": "array"
+    },
+    "can-provide-from-hardware": {
+      "type": "array"
+    },
+    "can-provide-from-infrastructure": {
+      "type": "array"
+    }
+  }
+}

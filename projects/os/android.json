@@ -1,0 +1,42 @@
+{
+  "id": "os-1",
+  "name": "Android",
+  "type": "os-family",
+  "license": "partly-free",
+  "hardware-compatibilities": [],
+  "hardware-dependencies": [],
+  "can-provide-from-hardware": [
+    "gps",
+    "microphone"
+  ],
+  "can-provide-from-infrastructure": [
+    "gsm",
+    "internet"
+  ]
+}
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "hardware-compatibilities": {},
+    "hardware-dependencies": {},
+    "can-provide-from-hardware": {
+      "type": "array"
+    },
+    "can-provide-from-infrastructure": {
+      "type": "array"
+    }
+  }
+}

@@ -1,11 +1,3 @@
-# GET /
-+ Response 200 (application/json)
-    + Attributes (Signal)
-
-# Data Structures
-
-# Signal
-
 - id: `signal-android` (required)
 - name: Signal Android (required)
 - type: app (required)
@@ -48,8 +40,4 @@
     - (object)
         - `id`: 02
         - `name`: `signal-backend-servers`
-
-# _meta
-
-:[](../../../schema/_meta/index.md)
 

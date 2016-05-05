@@ -1,0 +1,19 @@
+{
+  "id": "app-5",
+  "name": "Tor Browser",
+  "type": "source-repository",
+  "build-artifacts": [
+    "name: Tor Browser Windows",
+    "type: `native-desktop`",
+    "name: `Tor Browser Linux 32-bit`"
+  ],
+  "infra-deps": [
+    "name: unblocked bridge or guard",
+    "name: directory authorities"
+  ],
+  "dependencies": [],
+  "builds": [],
+  "oses": [],
+  "infra": [],
+  "os": ""
+}

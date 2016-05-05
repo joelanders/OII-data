@@ -7,7 +7,13 @@
 # Messenger
 
 - id: `android-messenger` (required)
+- `type`: `something`
 - name: Android Messenger (required)
+- dependencies (array)
+- builds (array)
+- os
+- oses (array)
+- infra (array)
 - `hw-deps` (array)
     - (object)
         - name: gsm-baseband

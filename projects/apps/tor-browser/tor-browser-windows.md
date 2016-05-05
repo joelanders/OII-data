@@ -1,19 +1,27 @@
-# Tor Browser
-example of multi-platform source repo
+# GET /
++ Response 200 (application/json)
+    + Attributes (Tor Browser Windows)
 
-## Properties
+# Data Structures
 
-- id: app-5
+# Tor Browser Windows
+
+- id: `app-5`
 - name: Tor Browser
-- type: source-repository
-- build-artifacts (array)
+- type: `source-repository`
+- `build-artifacts` (array)
   - (object)
     - name: Tor Browser Windows
-    - type: native-desktop
+    - type: `native-desktop`
   - (object)
-    - name: Tor Browser Linux 32-bit
-- infra-deps (array)
+    - name: `Tor Browser Linux 32-bit`
+- `infra-deps` (array)
   - (object)
     - name: unblocked bridge or guard
   - (object)
     - name: directory authorities
+- dependencies (array)
+- builds (array)
+- oses (array)
+- infra (array)
+- os

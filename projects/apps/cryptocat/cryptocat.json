@@ -1,26 +1,40 @@
 {
   "id": "app-2",
   "name": "Cryptocat",
+  "os": "",
+  "oses": [],
   "type": "source-repository",
   "vcs-url": "https://github.com/cryptocat/cryptocat.git",
   "manifest": {
-    "type": "npm",
+    "kind": "npm",
     "deps": "lib1 lib2"
   },
   "builds": [
     {
-      "name": "cryptocat",
+      "id": "blah",
       "type": "server",
-      "checksum": "abcde"
+      "checksum": "abcde",
+      "metadata": {
+        "id": "blah",
+        "submitter": "joe"
+      }
     },
     {
-      "name": "cryptocat",
+      "id": "blah",
       "type": "webapp",
-      "checksum": "abcde"
+      "checksum": "abcde",
+      "metadata": {
+        "id": "blah",
+        "submitter": "joe"
+      }
     }
   ],
   "app-type": "web",
+  "dependencies": [],
   "infra": [
-    "cryptocat-backend-server"
+    {
+      "id": "01",
+      "name": "cryptocat-backend-server"
+    }
   ]
 }

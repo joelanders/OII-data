@@ -8,20 +8,31 @@
 
 - id: `app-2` (required)
 - name: Cryptocat
+- os
+- oses (array)
 - type: `source-repository`
 - `vcs-url`: `https://github.com/cryptocat/cryptocat.git`
 - manifest (object)
-    - type: npm
+    - kind: npm
     - deps: lib1 lib2
 - builds (array)
     - (object)
-        - name: cryptocat-server
+        - id : blah
         - type: server
         - checksum: abcde
+        - `metadata` (object)
+            - `id`: `blah`
+            - submitter: joe
     - (object)
-        - name: cryptocat-client
+        - id : blah
         - type: webapp
         - checksum: abcde
+        - `metadata` (object)
+            - `id`: `blah`
+            - submitter: joe
 - `app-type`: web
+- dependencies (array)
 - `infra` (array):
-    - `cryptocat-backend-server`
+    - (object)
+        - `id`: 01
+        - `name`: `cryptocat-backend-server``

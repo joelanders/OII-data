@@ -1,6 +1,12 @@
 {
   "id": "android-messenger",
+  "type": "something",
   "name": "Android Messenger",
+  "dependencies": [],
+  "builds": [],
+  "os": "",
+  "oses": [],
+  "infra": [],
   "hw-deps": [
     {
       "name": "gsm",

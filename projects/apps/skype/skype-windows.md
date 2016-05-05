@@ -13,4 +13,4 @@
 - builds (array)
 - oses (array)
 - infra (array)
-- os
+- os: windows

@@ -12,7 +12,7 @@ build-json:
     artifacts:
         unchecked: true
         paths:
-            - entries/
+            - projects/
 
 commit-json:
     tags:

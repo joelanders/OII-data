@@ -2,9 +2,8 @@
 
 set -eu
 
-HERCULE=/usr/bin/hercule
-DRAFTER=/usr/local/bin/drafter
-REFRACT_FILTER=/usr/local/bin/refract-filter
+export PATH=../node_modules/.bin:$PATH
+echo $PATH
 
 path-to-obj-name() {
     file=$(basename $1) # strips the path part
@@ -32,16 +31,17 @@ print_footer() {
 
 mson-to-json() {
     ( print_header $(path-to-obj-name $1) && cat $1 && print_footer ) \
-        | $HERCULE \
-        | $DRAFTER --format json \
-        | $REFRACT_FILTER -j --content_type="application/json";
+        | hercule \
+        | drafter --format json \
+        | refract-filter -j --content_type="application/json";
 }
 
 validate-app() {
     ajv validate -d $1  -s schemas/app.json
 }
 
-( mkdir schemas
+# XXX note I'm not pointing at master here
+( mkdir schemas || true
   cd schemas
   wget "https://code.iilab.org/openintegrity/schema/raw/mson-to-json-ci/entries/app.json" )
 

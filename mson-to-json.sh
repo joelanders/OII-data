@@ -2,7 +2,7 @@
 
 set -eu
 
-HERCULE=/usr/local/bin/hercule
+HERCULE=/usr/bin/hercule
 DRAFTER=/usr/local/bin/drafter
 REFRACT_FILTER=/usr/local/bin/refract-filter
 
@@ -38,12 +38,12 @@ mson-to-json() {
 }
 
 validate-app() {
-    ../node_modules/.bin/ajv validate -d $1  -s schemas/app.json 
+    ajv validate -d $1  -s schemas/app.json
 }
 
-#( mkdir schemas
-#  cd schemas
-#  wget "https://code.iilab.org/openintegrity/schema/raw/mson-to-json-ci/entries/app.json" )
+( mkdir schemas
+  cd schemas
+  wget "https://code.iilab.org/openintegrity/schema/raw/mson-to-json-ci/entries/app.json" )
 
 
 for schema_file in `find projects/apps -type f -name "*.md"`; do

@@ -1,0 +1,22 @@
+- id: `android-messenger` (required)
+- `type`: `something`
+- name: Android Messenger (required)
+- dependencies (array)
+- builds (array)
+- os
+- oses (array)
+- infra (array)
+- `hw-deps` (array)
+    - (object)
+        - name: gsm-baseband
+        - id: XXX
+- `android-permissions-deps` (array)
+    - phone book
+    - microphone
+    - GPS
+- `infra-deps` (array)
+    - (object)
+        - name: `gsm-network`
+        - id: XXY
+- metrics (array)
+    - `(GSMMap - [data.json](../../metrics/1_sources/gsmmap/data.json) [FIXME]`

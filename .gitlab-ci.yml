@@ -1,0 +1,29 @@
+image: joeoi/mson-to-json-schema
+
+stages:
+    - build-json
+    - commit-json
+
+build-json:
+    tags:
+        - docker
+    stage: build-json
+    script: bash -l "mson-to-json.sh"
+    artifacts:
+        unchecked: true
+        paths:
+            - projects/
+
+commit-json:
+    tags:
+        - docker
+    stage: commit-json
+    script: bash -l "commit-json.sh"
+    dependencies:
+        - build-json
+
+variables:
+    GH_USERNAME: jmatsushita
+    GH_EMAIL: jun@iilab.org
+    CONFIG_OWNER: openintegrity
+    CONFIG_REPO: openintegrity.org

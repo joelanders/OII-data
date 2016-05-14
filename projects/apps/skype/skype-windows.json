@@ -1,0 +1,10 @@
+{
+  "id": "app-4",
+  "name": "blah",
+  "type": "blah",
+  "dependencies": [],
+  "builds": [],
+  "oses": [],
+  "infra": [],
+  "os": "windows"
+}

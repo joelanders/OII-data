@@ -1,25 +1,30 @@
-# Cryptocat
-example of two builds coming from a single source repo
-example (not yet shown) of multiple distribution methods
-example of optional infrastructure dependencies?
-
-## Properties
-
-- id: app-2 (required)
+- id: `app-2` (required)
 - name: Cryptocat
-- type: source-repository
-- vcs_url: https://github.com/cryptocat/cryptocat.git
-- manifests (array)
-  - (object)
-    - type: npm
+- os
+- oses (array)
+- type: `source-repository`
+- `vcs-url`: `https://github.com/cryptocat/cryptocat.git`
+- manifest (object)
+    - kind: npm
     - deps: lib1 lib2
-- build-artifacts (array)
-  - (object)
-    - name: cryptocat-server
-    - type: server
-  - (object)
-    - name: cryptocat-client
-    - type: webapp
-- app-type: web
-- infra-deps:
-  - cryptocat-backend-server - belongs under cryptocat-client?
+- builds (array)
+    - (object)
+        - id : blah
+        - type: server
+        - checksum: abcde
+        - `metadata` (object)
+            - `id`: `blah`
+            - submitter: joe
+    - (object)
+        - id : blah
+        - type: webapp
+        - checksum: abcde
+        - `metadata` (object)
+            - `id`: `blah`
+            - submitter: joe
+- `app-type`: web
+- dependencies (array)
+- `infra` (array):
+    - (object)
+        - `id`: 01
+        - `name`: `cryptocat-backend-server``

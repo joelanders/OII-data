@@ -1,0 +1,30 @@
+{
+  "id": "android-messenger",
+  "type": "something",
+  "name": "Android Messenger",
+  "dependencies": [],
+  "builds": [],
+  "os": "",
+  "oses": [],
+  "infra": [],
+  "hw-deps": [
+    {
+      "name": "gsm",
+      "id": "XXX"
+    }
+  ],
+  "android-permissions-deps": [
+    "phone book",
+    "microphone",
+    "GPS"
+  ],
+  "infra-deps": [
+    {
+      "name": "gsm-network",
+      "id": "XXY"
+    }
+  ],
+  "metrics": [
+    "(GSMMap - [data.json](../../metrics/1_sources/gsmmap/data.json) [FIXME]"
+  ]
+}

@@ -3,6 +3,17 @@
 - type: app (required)
 - source: `https://github.com/WhisperSystems/Signal-Android.git`
 - tracker: `https://github.com/WhisperSystems/Signal-Android/issues`
+- defaults:
+   - endtoend: 
+     - value: true
+     - source: https://...
+   - realname: 
+     - value: true
+     - source: https://...
+     - comment: 'Needs phone number'
+   - anonymous: 
+     - value: true
+     - source: https://...
 - manifest (object)
     - kind: gradle (required)
     - `_meta` (object)
@@ -40,14 +51,3 @@
     - (object)
         - `id`: 02
         - `name`: `signal-backend-servers`
-- defaults:
-   - endtoend: 
-     - value: true
-     - source: https://...
-   - realname: 
-     - value: true
-     - source: https://...
-     - comment: 'Needs phone number'
-   - anonymous: 
-     - value: true
-     - source: https://...

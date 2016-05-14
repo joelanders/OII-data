@@ -40,4 +40,14 @@
     - (object)
         - `id`: 02
         - `name`: `signal-backend-servers`
-
+- defaults:
+   - endtoend: 
+     - value: true
+     - source: https://...
+   - realname: 
+     - value: true
+     - source: https://...
+     - comment: 'Needs phone number'
+   - anonymous: 
+     - value: true
+     - source: https://...

@@ -1,0 +1,42 @@
+{
+  "name": "signal-android-v2.0.7", 
+  "children": [
+    {
+      "name": "com.actionbarsherlock:actionbarsherlock:4.4.0", 
+      "children": []
+    }, 
+    {
+      "name": "com.android.support:support-v4:19.0.1", 
+      "children": []
+    }, 
+    {
+      "name": "com.google.android.gcm:gcm-client:1.0.2", 
+      "children": []
+    }, 
+    {
+      "name": "se.emilsjolander:stickylistheaders:2.2.0", 
+      "children": []
+    }, 
+    {
+      "name": "project :library", 
+      "children": [
+        {
+          "name": "com.google.protobuf:protobuf-java:2.4.1", 
+          "children": []
+        }, 
+        {
+          "name": "com.madgag:sc-light-jdk15on:1.47.0.2", 
+          "children": []
+        }, 
+        {
+          "name": "com.googlecode.libphonenumber:libphonenumber:5.3", 
+          "children": []
+        }, 
+        {
+          "name": "org.whispersystems:gson:2.2.4", 
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,21 @@
   "type": "app",
   "source": "https://github.com/WhisperSystems/Signal-Android.git",
   "tracker": "https://github.com/WhisperSystems/Signal-Android/issues",
+  "defaults": {
+    "endtoend": {
+      "value": "true",
+      "source": "https://..."
+    },
+    "realname": {
+      "value": "true",
+      "source": "https://...",
+      "comment": "'Needs phone number'"
+    },
+    "anonymous": {
+      "value": "true",
+      "source": "https://..."
+    }
+  },
   "manifest": {
     "kind": "gradle",
     "_meta": {
